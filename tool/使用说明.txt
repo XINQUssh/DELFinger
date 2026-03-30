@@ -1,0 +1,8 @@
+train.py : 用于训练模型    指令： python train.py --gpu_ids 3 --name GhostNet --erasing_p 0.5 --batchsize 128 --data_dir ~/Data/xiaomi_train_mix_val --lr 0.05
+                                                  使用的gpu   训练的模型名        数据增强       每次读取图片         选择的训练集文件夹              学习率
+ghostnet.py：  网络模型文件
+
+test.py  ：测试rank指标文件  指令： python test.py --gpu_ids 2 --test_dir ~/Data/xiaomi_test_mix_0527/l-temperature --which_epoch 59 --name GhostNet
+                                                                    测试训练集位置                                    选择模型的代数     模型名称
+                                                                    
+test_frr_far.py  : 画出FRR和FAR的图 指令：python test_frr_far.py --gpu_ids 2 --which_epoch 89 --test_dir ~/Data/xiaomi_test_20/dry --name GhostNet
